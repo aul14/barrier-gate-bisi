@@ -1316,7 +1316,7 @@
                                 action: function() {
                                     $.ajax({
                                         type: "post",
-                                        url: '{{ route('api_cpi.delete') }}',
+                                        url: '{{ route('api_bisi.delete') }}',
                                         data: {
                                             plant: plant,
                                             sequence: sequence,

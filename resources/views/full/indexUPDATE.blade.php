@@ -1088,7 +1088,7 @@
                                     let formdata = $(this).serializeArray();
                                     $.ajax({
                                         type: "post",
-                                        url: '{{ route('api_cpi.timbangan') }}',
+                                        url: '{{ route('api_bisi.timbangan') }}',
                                         data: formdata,
                                         dataType: "json",
                                         success: function(res) {
@@ -1367,7 +1367,7 @@
                                     let formdata = $(this).serializeArray();
                                     $.ajax({
                                         type: "post",
-                                        url: '{{ route('api_cpi.timbangan') }}',
+                                        url: '{{ route('api_bisi.timbangan') }}',
                                         data: formdata,
                                         dataType: "json",
                                         success: function(res) {
@@ -1827,7 +1827,7 @@
                                 action: function() {
                                     $.ajax({
                                         type: "post",
-                                        url: '{{ route('api_cpi.delete') }}',
+                                        url: '{{ route('api_bisi.delete') }}',
                                         data: {
                                             plant: plant,
                                             sequence: sequence,

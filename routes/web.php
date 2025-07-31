@@ -34,13 +34,13 @@ Route::post('/reset-password', [ResetPassword::class, 'send'])->middleware('gues
 Route::get('/change-password', [ChangePassword::class, 'show'])->middleware('guest')->name('change-password');
 Route::post('/change-password', [ChangePassword::class, 'update'])->middleware('guest')->name('change.perform');
 
-Route::post('/api_cpi/registrasi', [BarierRealTimeController::class, 'registrasi']);
-Route::post('/api_cpi/delete', [BarierRealTimeController::class, 'destroy'])->name('api_cpi.delete');
-Route::get('/api_cpi/status', [BarierRealTimeController::class, 'status']);
-Route::post('/api_cpi', [BarierRealTimeController::class, 'timbangan'])->name('api_cpi.timbangan');
-Route::post('/api_cpi/regis_token', [BarierRealTimeController::class, 'update_token']);
+Route::post('/api_bisi/registrasi', [BarierRealTimeController::class, 'registrasi']);
+Route::post('/api_bisi/delete', [BarierRealTimeController::class, 'destroy'])->name('api_bisi.delete');
+Route::get('/api_bisi/status', [BarierRealTimeController::class, 'status']);
+Route::post('/api_bisi', [BarierRealTimeController::class, 'timbangan'])->name('api_bisi.timbangan');
+Route::post('/api_bisi/regis_token', [BarierRealTimeController::class, 'update_token']);
 Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
-Route::post('/api_cpi/store_log_plc', [LogApiPlcController::class, 'store_log_plc'])->name('store_log_plc');
+Route::post('/api_bisi/store_log_plc', [LogApiPlcController::class, 'store_log_plc'])->name('store_log_plc');
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
