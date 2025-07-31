@@ -21,6 +21,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ResetPassword;
 use App\Http\Controllers\ChangePassword;
 use App\Http\Controllers\FullRealController;
+use App\Http\Controllers\LogApiPlcController;
 use App\Http\Controllers\LogApiSapController;
 use App\Http\Controllers\LogBarierGateController;
 use App\Http\Controllers\ReportController;
@@ -47,6 +48,7 @@ Route::group(['middleware' => ['auth', 'prevent-back-history']], function () {
 	Route::get('/home', [HomeController::class, 'index']);
 	Route::get('/log', [LogBarierGateController::class, 'index'])->name('log.index');
 	Route::get('/sap_log', [LogApiSapController::class, 'index'])->name('log_sap.index');
+	Route::get('/store_log_plc', [LogApiPlcController::class, 'store_log_plc'])->name('store_log_plc');
 	Route::get('/report', [ReportController::class, 'index'])->name('report.index');
 	Route::get('/antrian', [AntrianBarierGateController::class, 'index'])->name('antrian.index');
 	Route::get('/full_page/{parameter?}', [FullRealController::class, 'index'])->name('full_page');
