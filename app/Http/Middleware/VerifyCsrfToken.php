@@ -12,10 +12,11 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        'api_cpi',
-        'api_cpi/status',
-        'api_cpi/registrasi',
-        'api_cpi/regis_token',
-        'api_cpi/delete'
+        'api_bisi',
+        'api_bisi/status',
+        'api_bisi/registrasi',
+        'api_bisi/regis_token',
+        'api_bisi/delete',
+        'api_bisi/store_log_plc'
     ];
 }
